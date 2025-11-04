@@ -21,7 +21,11 @@ function RectangleTool() {
         var y = Math.min(startMouseY, currY);
         var w = Math.abs(currX - startMouseX); // w,h ought to be positive
         var h = Math.abs(currY - startMouseY);
+
+        push();
+        noFill();
         rect(x, y, w, h);
+        pop();
       }
     } else if (drawing) {
       drawing = false;
